@@ -1,16 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './AdminPage.css';
-
 
 const AdminPage = () => {
     const [text, setText] = useState("");
     const [editable, setEditable] = useState(true);
     const [success, setSuccess] = useState(false);
 
+    // ✅ Fetch heading on first load
+    useEffect(() => {
+        const fetchHeading = async () => {
+            try {
+                const response = await axios.get("https://brynk-cms-backend-production.up.railway.app/api/heading");
+                if (response.data && response.data.text) {
+                    setText(response.data.text);
+                }
+            } catch (error) {
+                console.error("Error fetching heading:", error);
+            }
+        };
+
+        fetchHeading();
+    }, []); // ✅ Only runs once on mount
+
     const handleSave = async () => {
         try {
-            await axios.post("https://brynk-cms-production.up.railway.app/api/heading", { text });
+            await axios.post("https://brynk-cms-backend-production.up.railway.app/api/heading", { text });
             setSuccess(true);
             setEditable(false);
         } catch (error) {
@@ -49,9 +64,7 @@ const AdminPage = () => {
                 )}
             </div>
         </div>
-
     );
-
 };
 
 export default AdminPage;
