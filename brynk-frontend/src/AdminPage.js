@@ -10,7 +10,7 @@ const AdminPage = () => {
 
     const handleSave = async () => {
         try {
-            await axios.post("http://localhost:8080/api/heading", { text });
+            await axios.post("https://brynk-cms-production.up.railway.app/api/heading", { text });
             setSuccess(true);
             setEditable(false);
         } catch (error) {
