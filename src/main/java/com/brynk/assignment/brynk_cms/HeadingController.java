@@ -1,4 +1,5 @@
 package com.brynk.assignment.brynk_cms;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
