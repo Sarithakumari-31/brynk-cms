@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.brynk.assignment.brynk_cms.BrynkCmsApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.089 s -- in com.brynk.assignment.brynk_cms.BrynkCmsApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.992 s -- in com.brynk.assignment.brynk_cms.BrynkCmsApplicationTests
