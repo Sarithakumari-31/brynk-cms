@@ -46,3 +46,14 @@ public class HeadingController {
         return headingRepository.save(heading);
     }
 }
+@PostMapping("/init")
+public String manualInit() {
+    if (headingRepository.count() == 0) {
+        Heading heading = new Heading();
+        heading.setText("Welcome to Brynk CMS!");
+        headingRepository.save(heading);
+        return "✅ Default heading created!";
+    } else {
+        return "ℹ️ Heading already exists.";
+    }
+}
