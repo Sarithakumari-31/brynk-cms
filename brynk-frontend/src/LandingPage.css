@@ -1,0 +1,53 @@
+/* LandingPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.landing-wrapper {
+    height: 100vh;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.landing-content {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 40px 50px;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+.landing-heading {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.landing-subtext {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.landing-button {
+    background-color: #fff;
+    color: #4a00e0;
+    border: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.landing-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
