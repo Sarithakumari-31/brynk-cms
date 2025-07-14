@@ -9,7 +9,7 @@ const LandingPage = () => {
     useEffect(() => {
         const fetchHeading = () => {
             axios
-                .get("http://localhost:8080/api/heading")
+                .get("https://brynk-cms-production.up.railway.app/api/heading")
                 .then((res) => setHeading(res.data.text || ""))
                 .catch((err) => console.error("Error:", err));
         };
